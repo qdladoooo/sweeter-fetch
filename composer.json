@@ -2,7 +2,7 @@
     "name": "qdladoooo/sweeter-fetch",
     "type": "library",
     "description": "Database fetch class for laravel5. procedure oriented, pre process, as supplement of ORM.",
-    "keywords": ["pdo wrapper", "sweeter", "fetch mysql"],
+    "keywords": ["pdo wrapper", "sweeter", "fetch"],
     "homepage": "https://github.com/qdladoooo/sweeter-fetch",
     "license": "MIT",
     "authors": [
