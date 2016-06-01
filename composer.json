@@ -1,10 +1,7 @@
 {
     "name": "qdladoooo/sweeter-fetch",
-    "type": "library",
     "description": "Database fetch class for laravel5. procedure oriented, pre process, as supplement of ORM.",
     "keywords": ["pdo wrapper", "sweeter", "fetch"],
-    "homepage": "https://github.com/qdladoooo/sweeter-fetch",
-    "license": "MIT",
     "authors": [
         {
             "name": "Dlad",
@@ -13,25 +10,8 @@
             "role": "Developer"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:qdladoooo/sweeter-fetch.git"
-        }
-    ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.0",
         "ext-pdo": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "SweeterFetch\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "SweeterFetch\\Test\\": "test/"
-        }
     }
 }
