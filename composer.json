@@ -4,6 +4,7 @@
     "description": "Database fetch class for laravel5. procedure oriented, pre process, as supplement of ORM.",
     "keywords": ["pdo wrapper", "sweeter", "fetch"],
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Dlad",
