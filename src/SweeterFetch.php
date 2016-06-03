@@ -1,13 +1,26 @@
-<?php namespace App\Libs;
+<?php 
+namespace SweeterFetch;
 
-use DB;
-class SweeterFetch {
+class Factory {
+    protected static $pdo_ar = [];
     protected static $pdo;
-    function __construct() {
-        if (self::$pdo == null) {
-            self::$pdo = DB::getPdo();
-            self::$pdo->exec ( 'SET NAMES UTF8' );
+
+    function __construct($host, $user_name, $password) {
+        return $this->GetInstance($host, $user_name, $password);
+    }
+
+    //instance
+    function GetInstance($host, $user_name, $password) {
+    	$hash = md5($host . $user_name . $password);
+        if ( !isset(self::$pdo_ar[$hash]) ) {
+            self::$pdo = new \PDO("mysql:host={$host};", $user_name, $password);;
+            self::$pdo->exec('SET NAMES UTF8');
+            self::$pdo_ar[$hash] = $self::$pdo;
+        } else {
+        	self::$pdo = self::$pdo_ar[$hash];
         }
+
+        return self::$pdo;
     }
 
     //excute query
@@ -49,16 +62,6 @@ class SweeterFetch {
     function lastInsertId() {
         return $this->Es('select last_insert_id();');
     }
-
-    //todo: 这个lib不该有insert，update方法，事急从权，后续处理
-    //excute none query
-    function Enq($sql) {
-        $res = self::$pdo->exec( $sql );
-        $this->IsError();
-
-        return $res;
-    }
-
 
     //for dump
     function IsError() {
