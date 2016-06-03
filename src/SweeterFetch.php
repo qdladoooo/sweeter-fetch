@@ -1,5 +1,5 @@
 <?php 
-namespace Dlad\SweeterFetch;
+namespace Qdladoooo\SweeterFetch;
 
 class SweeterFetch {
     protected static $pdo_ar = [];
