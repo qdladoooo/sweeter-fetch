@@ -1,5 +1,5 @@
 {
-    "name": "qdladoooo/sweeter-fetch",
+    "name": "dlad/sweeter-fetch",
     "type": "libraty",
     "description": "Sweeter-fetch, a PDO wrapper libraty. Procedure oriented, pre process, as supplement of ORM.",
     "keywords": ["pdo wrapper", "sweeter", "fetch"],
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SweeterFetch\\": "src"
+            "Dlad\\SweeterFetch\\": "src/"
         }    
     },
     "extra": {
