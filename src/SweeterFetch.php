@@ -1,7 +1,7 @@
 <?php 
 namespace SweeterFetch;
 
-class Factory {
+class SweeterFetch {
     protected static $pdo_ar = [];
     protected static $pdo;
 
