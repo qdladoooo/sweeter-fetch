@@ -4,6 +4,7 @@ namespace SweeterFetch;
 class SweeterFetch {
     protected static $pdo_ar = [];
     protected static $pdo;
+    protected static $need_dump_info = false;
 
     function __construct($host, $user_name, $password) {
         return $this->GetInstance($host, $user_name, $password);
@@ -15,12 +16,17 @@ class SweeterFetch {
         if ( !isset(self::$pdo_ar[$hash]) ) {
             self::$pdo = new \PDO("mysql:host={$host};", $user_name, $password);;
             self::$pdo->exec('SET NAMES UTF8');
-            self::$pdo_ar[$hash] = $self::$pdo;
+            self::$pdo_ar[$hash] = self::$pdo;
         } else {
         	self::$pdo = self::$pdo_ar[$hash];
         }
 
         return self::$pdo;
+    }
+
+    //need dump info
+    function NeedDumpInfo() {
+        self::$need_dump_info = true;
     }
 
     //excute query
@@ -65,7 +71,7 @@ class SweeterFetch {
 
     //for dump
     function IsError() {
-        if( env('APP_DEBUG', false) ) {
+        if( self::$need_dump_info ) {
             $errorCode = self::$pdo->errorCode ();
             if ($errorCode != '00000') {
                 var_dump ( self::$pdo->errorInfo () );
