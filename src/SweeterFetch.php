@@ -11,7 +11,7 @@ class SweeterFetch {
     }
 
     //instance
-    function GetInstance($host, $user_name, $password) {
+    private function GetInstance($host, $user_name, $password) {
     	$hash = md5($host . $user_name . $password);
         if ( !isset(self::$pdo_ar[$hash]) ) {
             self::$pdo = new \PDO("mysql:host={$host};", $user_name, $password);;
