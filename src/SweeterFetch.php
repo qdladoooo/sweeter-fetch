@@ -2,10 +2,13 @@
 namespace SweeterFetch;
 
 class SweeterFetch {
+    //store pdo instance
     protected static $pdo_ar = [];
     protected static $pdo;
+    //switch of dump info
     protected static $need_dump_info = false;
 
+    //init
     function __construct($host, $user_name, $password) {
         return $this->GetInstance($host, $user_name, $password);
     }
@@ -24,9 +27,20 @@ class SweeterFetch {
         return self::$pdo;
     }
 
+    //for dump
+    private function IsError() {
+        if( self::$need_dump_info ) {
+            $errorCode = self::$pdo->errorCode ();
+            if ($errorCode != '00000') {
+                var_dump ( self::$pdo->errorInfo () );
+                exit ();
+            }
+        }
+    }
+
     //need dump info
-    function NeedDumpInfo() {
-        self::$need_dump_info = true;
+    function NeedDumpInfo( $flag = true ) {
+        self::$need_dump_info = (bool)$flag;
     }
 
     //excute query
@@ -67,17 +81,6 @@ class SweeterFetch {
     //last insert id
     function lastInsertId() {
         return $this->Es('select last_insert_id();');
-    }
-
-    //for dump
-    function IsError() {
-        if( self::$need_dump_info ) {
-            $errorCode = self::$pdo->errorCode ();
-            if ($errorCode != '00000') {
-                var_dump ( self::$pdo->errorInfo () );
-                exit ();
-            }
-        }
     }
 
     function quote($var) {
