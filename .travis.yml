@@ -20,7 +20,7 @@ before_script:
   - mysql -e 'CREATE database candy_shop;' -uroot
   - mysql -e "GRANT ALL PRIVILEGES ON candy_shop.* TO 'travis'@'localhost';" -uroot
   - mysql -e "FLUSH PRIVILEGES;" -uroot
-  - mysql -e "use candy_shop; source ./tests/dbscript/candy_shop_2016-06-07.sql" -uroot
+  - mysql -uroot candy_shop  < ./tests/dbscript/candy_shop_2016-06-07.sql
   # Tell php to shut up :P
   - echo 'date.timezone = "Asia/Shanghai"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
 
