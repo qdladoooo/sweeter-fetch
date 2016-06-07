@@ -43,7 +43,7 @@ class SweeterFetch {
         self::$need_dump_info = (bool)$flag;
     }
 
-    //excute query
+    //execute query
     function Eq($sql) {
         $res = self::$pdo->query ( $sql );
         $this->IsError ();
@@ -51,7 +51,7 @@ class SweeterFetch {
         return $res->fetchAll ();
     }
 
-    //excute one row
+    //execute one row
     function Eor($sql) {
         $res = self::$pdo->query ( $sql );
         $this->IsError ();
@@ -60,7 +60,7 @@ class SweeterFetch {
         return $data;
     }
 
-    //excute col
+    //execute col
     function Ec($sql) {
         $res = self::$pdo->query ( $sql );
         $this->IsError ();
@@ -69,13 +69,21 @@ class SweeterFetch {
         return $data;
     }
 
-    //excute scalar
+    //execute scalar
     function Es($sql) {
         $res = self::$pdo->query ( $sql );
         $this->IsError ();
         $res->setFetchMode ( \PDO::FETCH_NUM );
         $data = $res->fetch ( \PDO::FETCH_COLUMN );
         return $data;
+    }
+
+    //execute none query
+    function Enq($sql) {
+        $res = self::$pdo->exec($sql);
+        $this->IsError();
+
+        return $res;
     }
 
     function quote($var) {

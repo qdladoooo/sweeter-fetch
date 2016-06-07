@@ -18,27 +18,34 @@ use SweeterFetch\SweeterFetch;
 $sf = new SweeterFetch('host', 'username', 'password');
 ```
 ##Use
-Excute query
+Execute none query
+
+```php
+//return nothing
+$sf->Enq('use candy_shop;');
+```
+
+Execute query
 
 ```php
 //return [row1, row2, ...]
 $sf->Eq($sql);
 ```
-Excute one row
+Execute one row
 
 ```php
 //return the first row by array
 $sf->Eor($sql);
 ```
 
-Excute col
+Execute column
 
 ```php
-//return a cell
+//return a column
 $sf->Ec($sql);
 ```
 
-Excute scalar 
+Execute scalar 
 
 ```php
 //return a number
