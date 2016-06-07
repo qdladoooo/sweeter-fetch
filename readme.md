@@ -45,10 +45,4 @@ Excute scalar
 $sf->Es($sql);
 ```
 
-Last insert id
-
-```php
-//return last insert id 
-$sf->lastInsertId($sql);
-```
 

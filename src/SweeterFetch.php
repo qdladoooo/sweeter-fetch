@@ -78,11 +78,6 @@ class SweeterFetch {
         return $data;
     }
 
-    //last insert id
-    function lastInsertId() {
-        return $this->Es('select last_insert_id();');
-    }
-
     function quote($var) {
         return self::$pdo->quote ( $var );
     }
