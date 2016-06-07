@@ -14,7 +14,7 @@ before_script:
   - chmod -R 0777 src/
   # Set up Mysql
   - mysql -e "" -uroot
-  - mysql -e 'CREAT database candy_shop;' -uroot
+  - mysql -e 'CREATE database candy_shop;' -uroot
   - mysql -e "GRANT ALL PRIVILEGES ON candy_shop.* TO 'travis'@'localhost';" -uroot
   - mysql -e "FLUSH PRIVILEGES;" -uroot
   # Tell php to shut up :P
