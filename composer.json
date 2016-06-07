@@ -17,6 +17,9 @@
         "php": "^7.0",
         "ext-pdo": "*"
     },
+    "require-dev": {
+        "phpunit/phpunit": "~5.4"
+    },
     "autoload": {
         "psr-4": {
             "SweeterFetch\\": "src/"
