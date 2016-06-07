@@ -3,9 +3,9 @@ Wrapper for PDO.
 
 Procedure oriented, Pre process, As supplement of ORM.
 
+[![Build Status](https://secure.travis-ci.org/qdladoooo/sweeter-fetch.png?branch=master)](https://travis-ci.org/qdladoooo/sweeter-fetch)
 [![Latest Stable Version](https://poser.pugx.org/qdladoooo/sweeter-fetch/v/stable)](https://packagist.org/packages/qdladoooo/sweeter-fetch)
 [![Latest Unstable Version](https://poser.pugx.org/qdladoooo/sweeter-fetch/v/unstable)](https://packagist.org/packages/qdladoooo/sweeter-fetch)
-[![Monthly Downloads](https://poser.pugx.org/qdladoooo/sweeter-fetch/d/monthly)](https://packagist.org/packages/qdladoooo/sweeter-fetch)
 [![License](https://poser.pugx.org/qdladoooo/sweeter-fetch/license)](https://packagist.org/packages/qdladoooo/sweeter-fetch)
 ##Installation
 ```shell
