@@ -4,7 +4,7 @@ Wrapper for PDO.
 Procedure oriented, Pre process, As supplement of ORM.
 
 ##Build status
-[![Build Status](https://secure.travis-ci.org/bolt/bolt.png?branch=master)](https://travis-ci.org/qdladoooo/sweeter-fetch)
+[![Build Status](https://secure.travis-ci.org/qdladoooo/sweeter-fetch.png?branch=master)](https://travis-ci.org/qdladoooo/sweeter-fetch)
 
 ##Installation
 ```shell
