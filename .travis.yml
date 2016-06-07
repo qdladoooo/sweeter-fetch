@@ -25,10 +25,4 @@ before_script:
   # Tell php to shut up :P
   - echo 'date.timezone = "Asia/Shanghai"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
 
-  notifications:
-    email:
-      recipients:
-        - qdladoooo@gmail.com
-        on_failure: always
-
-  script: phpunit -c phpunit.xml --coverage-text
+script: phpunit -c phpunit.xml --coverage-text
