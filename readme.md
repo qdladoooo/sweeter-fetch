@@ -1,4 +1,4 @@
-##Sweeter-fetch - a Database fetching library
+##Sweeter-fetch - a database fetching library
 Wrapper for PDO.
 
 Procedure oriented, Pre process, As supplement of ORM.
