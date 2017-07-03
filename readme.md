@@ -1,4 +1,4 @@
-##Sweeter-fetch - a database fetching library
+## Sweeter-fetch - a database fetching library
 Wrapper for PDO.
 
 Procedure oriented, Pre process, As supplement of ORM.
@@ -7,18 +7,18 @@ Procedure oriented, Pre process, As supplement of ORM.
 [![Latest Stable Version](https://poser.pugx.org/qdladoooo/sweeter-fetch/v/stable)](https://packagist.org/packages/qdladoooo/sweeter-fetch)
 [![Latest Unstable Version](https://poser.pugx.org/qdladoooo/sweeter-fetch/v/unstable)](https://packagist.org/packages/qdladoooo/sweeter-fetch)
 [![License](https://poser.pugx.org/qdladoooo/sweeter-fetch/license)](https://packagist.org/packages/qdladoooo/sweeter-fetch)
-##Installation
+## Installation
 ```shell
 composer require qdladoooo/sweeter-fetch
 ```
-##Initialization
+## Initialization
 ```php
 require "../vendor/autoload.php";
 use SweeterFetch\SweeterFetch;
 
 $sf = new SweeterFetch('host', 'username', 'password');
 ```
-##Use
+## Use
 Execute none query
 
 ```php
